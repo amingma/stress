@@ -25,7 +25,10 @@ func getRandomEdge(adj [][]bool) Edge {
 
 func GenerateRandomGraph(n int, m int) string {
 	var ret strings.Builder
-	adj := make([][]bool, n, n)
+	adj := make([][]bool, n)
+	for i := range adj {
+		adj[i] = make([]bool, n)
+	}
 	fmt.Fprintf(&ret, "%d %d", n, m)
 	in_tree := []int{1}
 	out_tree := []int{}
