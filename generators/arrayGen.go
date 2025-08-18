@@ -15,6 +15,9 @@ func GenerateRandomArray(n int, a int, b int) string {
 		if i != n-1 {
 			ret.WriteString(" ")
 		}
+		if i == n-1 {
+			ret.WriteString("\n")
+		}
 	}
 	return ret.String()
 }
