@@ -20,9 +20,9 @@ func shuffleArray(arr []int) []int {
 func GenerateRandomTree(n int) string {
 	var ret strings.Builder
 	fmt.Fprintf(&ret, "%d\n", n-1)
-	in_tree := []int{0}
+	in_tree := []int{1}
 	out_tree := []int{}
-	for i := 1; i < n; i++ {
+	for i := 2; i <= n; i++ {
 		out_tree = append(out_tree, i)
 	}
 	for range n - 1 {
